@@ -1,0 +1,201 @@
+/* commun */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');/*Importation des polices*/
+
+:root {
+    --yellow: #fab637;
+    --pink: #FF4848;
+    --brown: #CC6119;
+    --grey: #eceff3;
+    --black: #232628;
+    --blue: #6C98E1;
+    box-sizing: border-box;
+}
+* {
+    box-sizing: inherit;
+}
+
+body h1, h2 {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif ;
+}
+body {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+body strong {
+    color: var(--brown);
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.accessibility {
+    position: absolute;
+    left: -15000px;
+}
+/* commun */
+
+/* mainHeader */
+#mainHeader {
+    background-color: var(--black);
+}
+#mainHeader p, h1, address {
+    color: white;
+}
+#mainHeader h1 {
+    margin: 0;
+    display: flex;
+}
+#mainHeader ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#mainHeader div {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#mainNav {
+    display: none;
+}
+#mainNav ul {
+    background-color: rgba(236, 239, 243, 0.5);
+    height: 3em;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+#mainNav li {
+    padding: 0 20px;
+}
+#mainNav a:link, a:visited {
+    color: var(--black);
+}
+#mainNav a:hover {
+    color: var(--brown);
+}
+#menuToggle {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+}
+/* mainHeader */
+
+/*mainFooter*/
+#mainFooter {
+    width: 100%;
+    background-color: var(--black);
+}
+#copyright {
+    border-top: solid #eceff3 1px;
+}
+/*mainFooter*/
+
+/* pageContecte page Contact */
+input {
+    border: none;
+    background-color: #eceff3;
+    width: 300px;
+    height: 2em;
+}
+textarea {
+    border: none;
+    background-color: #eceff3;
+    width: 300px;
+    height: 7em;
+}
+#frmcontact > div > label {
+    line-height: 1.5em;
+}
+#frmcontact button {
+    background-color: #6C98E1;
+    border: none;
+    padding: 20px 50px;
+    border-radius: 5%;
+}
+#frmcontact textarea {
+    resize: none;
+}
+/* pageContecte page Contact */
+
+#informations, #pourquoiNousChoisir {
+    width: 70%;
+    margin: 0 auto;
+}
+#imageEnTete {
+    background-image: url(/images/vehicule1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#blocLocation {
+    background-color: var(--black);
+}
+#blocLoue {
+    background-color: rgba(250, 182, 56, 0.7);
+    width: 70%;
+    padding: 50px;
+}
+#blocAchat {
+    background-color: rgba(255, 72, 72, 0.7);
+    width: 70%;
+    padding: 50px;
+    text-align: justify;
+}
+.duoCol {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#locVoiture li {
+    text-transform: none;
+}
+#locVoiture h2 {
+    color: white;
+    text-align: center;
+    line-height: 2em;
+    border-bottom: solid #CC6119 1px;
+}
+#locVoiture span, #locVoiture p {
+    font-weight: bold;
+    font-size: 0.8em;
+    color: white;
+}
+#locVoiture ul {
+    margin-right: 5%;
+    margin-left: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10%;
+}
+#copyright {
+    line-height: 2;
+    text-align: center;
+    margin: 0;
+}
+
+/*Réglage en fonction de la taille de l'écran*/
+@media screen and (min-width: 768px) {
+    #menuToggle {
+        display: none;
+    }
+    #mainNav {
+        display: block;
+    }
+}
+@media screen and (min-width: 1024px) {
+
+}
+@media screen and (min-width: 1200px) {
+
+}
+
+@media screen and (max-width: 768px) {
+    #mainNav {
+        display: none;
+    }
+}
