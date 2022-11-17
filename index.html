@@ -5,152 +5,204 @@
         <meta name="description" content="Club Auto vous permet d'acheter ou de louer une grande gamme de voiture à petit prix">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CLUB AUTO - Page d'accueil</title>
-        <link rel="stylesheet" href="/CSS/normalize.css">
         <link rel="stylesheet" href="/CSS/normal.css">
+        <link rel="stylesheet" href="scss/bootstrap.css">
+        <script src="https://kit.fontawesome.com/391ebf2e49.js" crossorigin="anonymous"></script>
     </head>
+<!-- Colors : primary (blue) #6C98E1; secondary (black) #232628; light (grey) #ECEFF3; info (brown) #CC6119; warning (yellow) #FAB637; danger (red) #FF4848; -->
     <body>
         <section id="mainHeader">
             <header>
-                <div>
-                    <h1>CLUB AUTO</h1>
-                    <img src="/images/header/icone-adresse.png" alt="Icone d'adresse" id="adressIcon">
-                    <address>
-                        <strong>ADRESSE :</strong><br>
-                        AVENUE CHARLES DE GAULLE<br>
-                        75000 PARIS
-                    </address>
-                    <img src="/images/header/icon-telephone.png" alt="Icone de téléphone" id="phoneIcon">
-                    <p>
-                        <strong>T&Eacute;L&Eacute;PHONE :</strong><br>
-                        01 23 45 67 89
-                    </p>
-                    <p>
-                        <strong>OUVERTURE :</strong> Du Lundi au Samedi<br>
-                        <strong>HORAIRES :</strong> De 9h à 17h
-                    </p>
-                    <ul>
-                        <li><img src="/images/header/logoFacebookRond.jpg" alt="Logo Facebook"></li>
-                        <li><img src="/images/header/logoTwitterRond.jpg" alt="Logo Twitter"></li>
-                    </ul>
+                <div class="bg-secondary">
+                    <div class="px-3 py-3">
+                        <div class="d-flex justify-content-end">
+                            <button type="button" class="navbar navbar-toggler pb-4">
+                                <span class="navbar-toggler-icon"></span>
+                            </button><!--Bouton menu hamburger visible en sm-->
+                        </div>
+                        <h1 class="d-none d-sm-block text-black">CLUB AUTO</h1>
+                        <address class="text-black d-none d-sm-block">
+                            <img src="/images/header/icone-adresse.png" alt="Icone d'adresse" id="adressIcon">
+                            <strong>ADRESSE :</strong><br>
+                            AVENUE CHARLES DE GAULLE<br>
+                            75000 PARIS
+                        </address>
+                        <p class="text-white row">
+                            <img src="/images/header/icon-telephone.png" alt="Icone de téléphone" id="phoneIcon" class="col-auto pe-0" style="height: 3.5em; width:auto">
+                            <span class="col-auto h4 ps-1 fw-bold"><span class="text-info h6 fw-bold">T&Eacute;L&Eacute;PHONE :</span><br>
+                            01 23 45 67 89</span>
+                        </p>
+                        <p class="text-black d-none d-sm-block">
+                            <strong>OUVERTURE :</strong> Du Lundi au Samedi<br>
+                            <strong>HORAIRES :</strong> De 9h à 17h
+                        </p>
+                        <ul class="d-none d-sm-block">
+                            <li><img src="/images/header/logoFacebookRond.jpg" alt="Logo Facebook"></li>
+                            <li><img src="/images/header/logoTwitterRond.jpg" alt="Logo Twitter"></li>
+                        </ul>
+                    </div>
                 </div>
-                <nav id="mainNav">
-                    <h1 class="accessibility">Menu principal</h1>
-                    <p class="accessibility"><a href="#pageContent" title="Accéder directement au contenu principal de cette page">Passer le menu</a></p>
-                    <ul>
-                        <li><a href="/index.html" title="Vers la page d'acceuil du site Club Auto">ACCUEIL</a></li>
-                        <li><a href="/clubAutoPageVente.html" title="Vers la page de vente du site Club Auto">VENTE</a></li>
-                        <li><a href="/clubAutoPageLocation.html" title="Vers la page de location du site Club Auto">LOCATION</a></li>
-                        <li><a href="/clubAutoPageContact.html" title="Vers la page de contact du site Club Auto">CONTACT</a></li>
-                    </ul>
+                <h1 class="accessibility">Menu principal</h1>
+                <p class="accessibility"><a href="#pageContent" title="Accéder directement au contenu principal de cette page">Passer le menu</a></p>
+                
+                <nav id="mainNav" class="navbar navbar-expand-sm bg-light container-fluid d-none d-sm-block position-absolute bg-opacity-75">
+                    <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/index.html" title="Vers la page d'acceuil du site Club Auto">ACCUEIL</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/clubAutoPageVente.html" title="Vers la page de vente du site Club Auto">VENTE</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/clubAutoPageLocation.html" title="Vers la page de location du site Club Auto">LOCATION</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/clubAutoPageContact.html" title="Vers la page de contact du site Club Auto">CONTACT</a>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
-                <button id="menuToggle"><img src="/images/header/hamburger.svg" alt="Ouvrir / Fermer le menu"></button><!--Bouton menu hamburger visible en dessous de 768px-->
             </header>
         </section><!--Ici se termine le #mainHeader-->
         <section id="pageContent">
-            <div id="imageEnTete">
-                <img src="/images/vehicule1.jpg" alt="Image de voiture">
-                <h1>CLUB AUTO <strong>LE MEILLEUR DE L'AUTOMOBILE</strong></h1>
-            </div><!--Ici se termine le #imageEnTete-->
             <div id="informations">
-                <article>
-                    <img src="/images/clients.jpg" alt="image de client">
-                    <h1>BIENVENUE CHEZ CLUB AUTO</h1>
-                    <p><h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam nulla reprehenderit error deleniti eos neque ullam, dignissimos blanditiis provident.</h2></p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi consequatur quos illo at quas! Assumenda est ratione quas minima? Nam expedita assumenda sed harum praesentium debitis, et, impedit soluta, vero nesciunt architecto. Dignissimos dolore, vitae iure non qui quisquam et enim ratione error esse eligendi, fugiat odit repellendus quidem alias fuga minus! Porro quas autem consectetur adipisci, quidem optio. Doloremque porro sapiente vitae blanditiis reiciendis enim molestias explicabo reprehenderit! Deleniti!</p><!--Fin de la première ligne d'article-->
-                    <img src="/images/entretien.jpg" alt="image d'entretien de voiture">
-                    <h1>LE MEILLEUR DE L'AUTOMOBILE</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptates dicta repellat! Eaque alias commodi quas sed repudiandae delectus voluptates. Laudantium quisquam impedit nemo atque adipisci doloribus temporibus cum cupiditate. Numquam aspernatur, vero quaerat tempora dolorem tenetur, nisi nobis laboriosam iure nostrum, ullam sint mollitia. Similique incidunt magni cum atque?</p>
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet.</li>
-                        <li>Lorem ipsum dolor sit amet.</li>
-                        <li>Lorem ipsum dolor sit amet.</li>
-                        <li>Lorem ipsum dolor sit amet.</li>
-                        <li>Lorem ipsum dolor sit amet.</li>
-                    </ul><!--Fin de la deuxième ligne d'article-->
+                <div id="imageEnTete" class="bg-secondary px-3 py-3">
+                    <img class="d-none d-sm-block" src="/images/vehicule1.jpg" alt="Image de voiture">
+                    <h1 class="fs-1 text-white text-wrap fw-bold">CLUB AUTO <span class="fs-1 text-info">LE MEILLEUR DE L'AUTOMOBILE</span></h1>
+                </div>
+                <article class="container">
+                    <div class="row">
+                        <img src="/images/clients.jpg" alt="image de client" class="col-10 offset-1 gy-5">
+                        <h1 class="col-10 offset-1 gy-3 fw-bold">BIENVENUE CHEZ <span class="text-info">CLUB AUTO</span></h1>
+                        <h2 class="col-10 offset-1 gy-3 fw-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam nulla reprehenderit error deleniti eos neque ullam.</h2>
+                        <p class="col-10 offset-1 gy-3 font-monospace text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi consequatur quos illo at quas! Assumenda est ratione quas minima? Nam expedita assumenda sed harum praesentium debitis, et, impedit soluta, vero nesciunt architecto. Dignissimos dolore, vitae iure non qui quisquam et enim ratione error esse eligendi, fugiat odit repellendus quidem alias fuga minus! Porro quas autem consectetur adipisci, quidem optio. Doloremque porro sapiente vitae blanditiis reiciendis enim molestias explicabo reprehenderit! Deleniti!</p><!--Fin de la première ligne d'article-->
+                    </div>
+                    <div class="row">
+                        <h1 class="col-10 offset-1 gy-5 fw-bold">LE MEILLEUR DE L'AUTOMOBILE</h1>
+                        <hr class="col-10 offset-1 gy-3">
+                        <p class="col-10 offset-1 gy-3 font-monospace text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptates dicta repellat! Eaque alias commodi quas sed repudiandae delectus voluptates. Laudantium quisquam impedit nemo atque adipisci doloribus temporibus cum cupiditate. Numquam aspernatur, vero quaerat tempora dolorem tenetur, nisi nobis laboriosam iure nostrum, ullam sint mollitia. Similique incidunt magni cum atque?</p>
+                        <div class="col-10 offset-1 gy-3 font-monospace">
+                            <p><i class="fa-solid fa-check" style="color: #CC6119"></i> Lorem ipsum dolor sit amet.</p>
+                            <p><i class="fa-solid fa-check" style="color: #CC6119"></i> Lorem ipsum dolor sit amet.</p>
+                            <p><i class="fa-solid fa-check" style="color: #CC6119"></i> Lorem ipsum dolor sit amet.</p>
+                            <p><i class="fa-solid fa-check" style="color: #CC6119"></i> Lorem ipsum dolor sit amet.</p>
+                            <p><i class="fa-solid fa-check" style="color: #CC6119"></i> Lorem ipsum dolor sit amet.</p>
+                        </div><!--Fin de la deuxième ligne d'article-->
+                        <img src="/images/entretien.jpg" alt="image d'entretien de voiture" class="col-10 offset-1 gy-3">
+                    </div>
                 </article>
             </div><!--Ici se termine le #informations-->
-            <div id="blocLocation">
-                <img src="/images/vente-location.jpg" alt="Image de voiture de location">
-                <span class="duoCol">
-                <div id="blocLoue">
-                    <h1>Vous souhaitez louer ?</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim sint architecto ipsum nihil impedit, dicta corporis doloremque nesciunt hic alias ab voluptatibus itaque ut illo amet blanditiis quibusdam excepturi nostrum minus consequatur. Quam, omnis dolore!</p>
+            <div id="blocLocation" class="my-5">
+                <div id="blocInfo">
+                    <span class="duoCol container">
+                        <div id="blocLoue" class="bg-warning bg-opacity-75 my-4 row">
+                            <h1 class="col-8 offset-2 mt-5 fw-bold">Vous souhaitez louer ?</h1>
+                            <p class="text-white col-8 offset-2 mb-5 font-monospace">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim sint architecto ipsum nihil impedit, dicta corporis doloremque nesciunt hic alias ab voluptatibus itaque ut illo amet blanditiis quibusdam excepturi nostrum minus consequatur. Quam, omnis dolore!</p>
+                        </div>
+                        <div id="blocAchat" class="bg-danger bg-opacity-75 my-4 row">
+                            <h1 class="col-8 offset-2 mt-5 fw-bold">Vous souhaitez acheter ?</h1>
+                            <p class="text-white col-8 offset-2 mb-5 font-monospace">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim sint architecto ipsum nihil impedit, dicta corporis doloremque nesciunt hic alias ab voluptatibus itaque ut illo amet blanditiis quibusdam excepturi nostrum minus consequatur. Quam, omnis dolore!</p>
+                        </div>
+                    </span>
                 </div>
-                <div id="blocAchat">
-                    <h1>Vous souhaitez acheter ?</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim sint architecto ipsum nihil impedit, dicta corporis doloremque nesciunt hic alias ab voluptatibus itaque ut illo amet blanditiis quibusdam excepturi nostrum minus consequatur. Quam, omnis dolore!</p>
-                </div>
-                </span>
                 
-                <div id="locVoiture">
-                    <h2>VEHICULES RECENTS</h2>
-                    <ul>
-                        <li>
-                            <a href="/clubAutoPageDetails.html">
-                                <img src="/images/vehicule2.jpg" alt="Image de voiture">
-                                <p>BMW 535I, NAVI, LEATHER, ABS</p>
-                                <span>5 500 €</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/clubAutoPageDetails.html">
-                                <img src="/images/vehicule2.jpg" alt="Image de voiture">
-                                <p>BMW 328I, SPORT LINE BODY KIT</p>
-                                <span>8 000 €</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/clubAutoPageDetails.html">
-                                <img src="/images/vehicule2.jpg" alt="Image de voiture">
-                                <p>FORD EXPLORER 2015 4WD</p>
-                                <span><i>9 000 €</i><br>8 200 €</span>
-                            </a>
-                        </li>
+                <div id="locVoiture" class="pb-2 bg-secondary">
+                    <h2 class="text-white text-center py-4 h1 fw-bold">VEHICULES RECENTS</h2>
+                    <hr class="border border-info border-2 opacity-100 col-10 offset-1">
+                    <ul class="container">
+                        <img src="/images/vehicule2.jpg" alt="Image de voiture" class="col-10 offset-1 mb-1 mt-4">
+                        <div class="card col-10 offset-1 text-bg-dark container rounded-0">
+                            <a href="/clubAutoPageDetails.html" class="offset-2 btn btn-primary streched-link my-3 rounded-0 col-4 text-white fw-bold">5 500 €</a>
+                            <p class="text-white col-10 offset-1 fw-bold">BMW 535I, NAVI, LEATHER, ABS</p>
+                            <hr>
+                        </div>
+                        <img src="/images/vehicule2.jpg" alt="Image de voiture" class="col-10 offset-1 mb-1 mt-4 d-none d-sm-block">
+                        <div class="card col-10 offset-1 text-bg-dark container rounded-0 d-none d-sm-block">
+                            <a href="/clubAutoPageDetails.html" class="offset-1 btn btn-primary streched-link my-3 rounded-0 col-4 text-white fw-bold">8 000 €</a>
+                            <p class="text-white col-10 offset-1 fw-bold">BMW 328I, SPORT LINE BODY KIT</p>
+                            <hr>
+                        </div>
+                        <img src="/images/vehicule2.jpg" alt="Image de voiture" class="col-10 offset-1 mb-1 mt-4 d-none d-sm-block">
+                        <div class="card col-10 offset-1 text-bg-dark container rounded-0 d-none d-sm-block">
+                            <a href="/clubAutoPageDetails.html" class="offset-1 btn btn-primary streched-link my-3 rounded-0 col-4 text-white fw-bold"><p>9 000 €</p><br>8 200 €</a>
+                            <p class="text-white col-10 offset-1 fw-bold">FORD EXPLORER 2015 4WD</p>
+                            <hr>
+                        </div>
                     </ul>
                 </div>
             </div><!--Ici se termine le #blocLocation-->
-            <div id="pourquoiNousChoisir">
-                <h1>Pourquoi nous choisir ?</h1>
-                <ul>
-                    <li><img src="/images/icon1.png" alt="Icone de financement"><h2>FINANCEMENT</h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima natus facere veritatis vitae optio laboriosam.</li>
-                    <li><img src="/images/icon2.png" alt="Icone de reactivite"><h2>R&Eacute;ACTIVIT&Eacute; DE L'&Eacute;QUIPE TECHNIQUE</h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima natus facere veritatis vitae optio laboriosam.</li>
-                    <li><img src="/images/icon3.png" alt="Icone de clientele"><h2>A L'&Eacute;COUTE DE NOTRE CLIENT&Egrave;LE</h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima natus facere veritatis vitae optio laboriosam.</li>
-                    <li><img src="/images/icon4.png" alt="Icone de service"><h2>SERVICE &amp; MAINTENANCE</h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima natus facere veritatis vitae optio laboriosam.</li>
-                </ul>
+            <div id="pourquoiNousChoisir" class="col-10 offset-1">
+                <h1 class="py-5 text-center">Pourquoi nous choisir ?</h1>
+                <div class="container">
+                    <div class="row">
+                        <img src="/images/icon1.png" alt="Icone de financement" class="col-4 ps-0" style="height: 4em; width:auto">
+                        <span class="col-8 ps-1">
+                            <h2 class="h5 fw-bold">FINANCEMENT</h2><p class="text-black-50 font-monospace">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima natus facere veritatis vitae optio laboriosam.</p>
+                        </span>
+                    </div>
+                    <div class="row">
+                        <img src="/images/icon2.png" alt="Icone de reactivite" class="col-4 ps-0" style="height: 4em; width:auto">
+                        <span class="col-8 ps-1">
+                            <h2 class="h5 fw-bold">R&Eacute;ACTIVIT&Eacute; DE L'&Eacute;QUIPE TECHNIQUE</h2><p class="text-black-50 font-monospace">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima natus facere veritatis vitae optio laboriosam.</p>
+                        </span>
+                    </div>
+                    <div class="row">
+                        <img src="/images/icon3.png" alt="Icone de clientele" class="col-4 ps-0" style="height: 3em; width:auto"><span class="col-8 ps-1">
+                        <span>
+                            <h2 class="h5 fw-bold">A L'&Eacute;COUTE DE NOTRE CLIENT&Egrave;LE</h2><p class="text-black-50 font-monospace">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima natus facere veritatis vitae optio laboriosam.</p>
+                        </span>
+                    </div>
+                    <div class="row">
+                        <img src="/images/icon4.png" alt="Icone de service" class="col-4 ps-0" style="height: 4em; width:auto"><span class="col-8 ps-1">
+                        <span>
+                            <h2 class="h5 fw-bold">SERVICE &amp; MAINTENANCE</h2><p class="text-black-50 font-monospace">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima natus facere veritatis vitae optio laboriosam.</p>
+                        </span>
+                    </div>
+                    <div class="d-flex justify-content-center my-5"><button type="button" class="btn btn-primary text-white fw-bold py-3 px-5 rounded-1 fs-5">CONTACTEZ NOUS</button></div>
+                </div>
             </div><!--Ici se termine le #pourquoiNousChoisir-->
-            <div id="imageDeBasDePage">
-                <img src="/images/vehicule3.jpg" alt="Image de voiture">
-                <h1>CLUB AUTO</h1>
-                <h2>VENTE ET LOCATION</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aliquid quos cumque voluptate reiciendis quaerat ab consequuntur alias, numquam porro tempora. Asperiores sapiente ea illo est earum accusantium iste eius?</p>
+            <div id="basDePage" class="py-5">
+                <div class="bg-warning bg-opacity-75 my-4 row">
+                    <h1 class="col-8 offset-2 mt-5 fw-bold">CLUB AUTO</h1>
+                    <h2 class="col-8 offset-2 text-white h1 fw-bold">VENTE ET LOCATION</h2>
+                    <p class="text-black col-8 offset-2 my-5 font-monospace">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aliquid quos cumque voluptate reiciendis quaerat ab consequuntur alias, numquam porro tempora. Asperiores sapiente ea illo est earum accusantium iste eius?</p>
+                </div>
             </div><!--Ici se termine le #imageDeBasDePage-->
         </section><!--Ici se termine le #pageContent-->
-        <footer id="mainFooter">
-            <p>
-                <h1><strong style="color: #6C98E1;">CLUB</strong> AUTO</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo debitis molestiae voluptates praesentium fugiat alias ipsam earum ipsa porro similique!</p>
-            </p>
-            <p>
-                <h1>HORAIRE D'OUVERTURE</h1>
-                Lundi - Samedi : 09:00 - 17:00<br>
-                Dimanche et jours fériés : Fermé
-            </p>
-            <p>
-                <h1>NEWSLETTER</h1>
-                <input type="email" id="Email" required placeholder="Entrez votre email">
-                <label for="Email">Inscrivez-vous pour recevoir les dernières offres</label>
-            </p>
-            <p>
-                <h1> R&Eacute;SEAUX SOCIAUX</h1>
-                <ul>
-                    <li><img src="/images/footer/logoFacebook.jpg" alt="Logo Facebook"></li>
-                    <li><img src="/images/footer/logoTwitter.jpg" alt="Logo Twitter"></li>
-                    <li><img src="/images/footer/logoInstagram.jpg" alt="Logo Intagram"></li>
-                    <li><img src="/images/footer/logoGooglePlus.jpg" alt="Logo google plus"></li>
-                    <li><img src="/images/footer/logoYoutube.jpg" alt="Logo youtube"></li>
-                </ul>
-            </p>
-            <p id="copyright">Copyright &copy; Club Auto - Tous droits réservés</p>
-        </footer><!--Ici se termine le #mainFooter-->
+        <footer id="mainFooter" class="bg-secondary text-white pb-1">
+            <div class="col-10 offset-1 pb-0">
+                <p class="py-1">
+                    <h1 class="h6"><span class="text-primary fw-bold">CLUB</span> AUTO</h1>
+                    <p class="text-white-50 font-monospace">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo debitis molestiae voluptates praesentium fugiat alias ipsam earum ipsa porro similique!</p>
+                </p>
+                <p class="py-1">
+                    <h1 class="h6 fw-bold">HORAIRE D'OUVERTURE</h1>
+                    <span class="text-white-50 fw-bold">Lundi - Samedi :</span> 09:00 - 17:00<br>
+                    <span class="text-white-50 fw-bold">Dimanche et jours fériés :</span> Fermé
+                </p>
+                <p class="py-1">
+                    <h1 class="h6 pb-2 fw-bold">NEWSLETTER</h1>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control rounded-0" placeholder="Entrez votre Email" aria-label="Entrez votre Email" aria-describedby="button-addon2">
+                        <button class="btn p-0 m-0 border-0" type="button" id="button-addon2"><img src="images/footer/connexion-sans-fil.png" alt="logo de connexion" style="height: 3em;"></button>
+                    </div>
+                
+                    <label for="Email" class="text-white-50 font-monospace">Inscrivez-vous pour recevoir les dernières offres</label>
+                </p>
+                <p class="py-1">
+                    <h1 class="h6 fw-bold"> R&Eacute;SEAUX SOCIAUX</h1>
+                    <div class="pb-3">
+                        <img src="/images/footer/logoFacebook.jpg" alt="Logo Facebook">
+                        <img src="/images/footer/logoTwitter.jpg" alt="Logo Twitter">
+                        <img src="/images/footer/logoInstagram.jpg" alt="Logo Intagram">
+                        <img src="/images/footer/logoGooglePlus.jpg" alt="Logo google plus">
+                        <img src="/images/footer/logoYoutube.jpg" alt="Logo youtube">
+                    </div>
+                </p>
+                <hr>
+                <p id="copyright" class="text-white-50 fs-6 text-center">Copyright &copy; Club Auto - Tous droits réservés</p>
+            </footer><!--Ici se termine le #mainFooter-->
+            </div>
     </body>
 </html>
