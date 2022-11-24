@@ -407,7 +407,7 @@ $body-text-align:           null !default;
 // Style anchor elements.
 
 $link-color:                              $primary !default;
-$link-decoration:                         underline !default;
+$link-decoration:                         none !default;
 $link-shade-percentage:                   20% !default;
 $link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
 $link-hover-decoration:                   null !default;
@@ -430,9 +430,9 @@ $paragraph-margin-bottom:   1rem !default;
 // scss-docs-start grid-breakpoints
 $grid-breakpoints: (
   xs: 0,
-  sm: 576px,
+  sm: 768px,
   md: 768px,
-  lg: 992px,
+  lg: 1200px,
   xl: 1200px,
   xxl: 1400px
 ) !default;
@@ -576,12 +576,12 @@ $h6-font-size:                $font-size-base !default;
 
 // scss-docs-start font-sizes
 $font-sizes: (
-  1: $h1-font-size * 2,
-  2: $h2-font-size,
-  3: $h3-font-size,
-  4: $h4-font-size,
-  5: $h5-font-size,
-  6: $h6-font-size
+  1: $h1-font-size *2,
+  2: $h2-font-size *1.5,
+  3: $h3-font-size *1.5,
+  4: $h4-font-size *1.2,
+  5: $h5-font-size ,
+  6: $h6-font-size 
 ) !default;
 // scss-docs-end font-sizes
 

@@ -169,7 +169,7 @@
   z-index: 1020;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .sticky-sm-top {
     position: -webkit-sticky;
     position: sticky;
@@ -197,7 +197,7 @@
     z-index: 1020;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .sticky-lg-top {
     position: -webkit-sticky;
     position: sticky;
@@ -1284,15 +1284,15 @@
 }
 
 .fs-2 {
-  font-size: calc(1.325rem + 0.9vw) !important;
+  font-size: calc(1.425rem + 2.1vw) !important;
 }
 
 .fs-3 {
-  font-size: calc(1.3rem + 0.6vw) !important;
+  font-size: calc(1.3875rem + 1.65vw) !important;
 }
 
 .fs-4 {
-  font-size: calc(1.275rem + 0.3vw) !important;
+  font-size: calc(1.305rem + 0.66vw) !important;
 }
 
 .fs-5 {
@@ -1669,7 +1669,7 @@
   visibility: hidden !important;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .float-sm-start {
     float: left !important;
   }
@@ -2661,7 +2661,7 @@
     text-align: center !important;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .float-lg-start {
     float: left !important;
   }
@@ -4154,13 +4154,13 @@
     font-size: 5rem !important;
   }
   .fs-2 {
-    font-size: 2rem !important;
+    font-size: 3rem !important;
   }
   .fs-3 {
-    font-size: 1.75rem !important;
+    font-size: 2.625rem !important;
   }
   .fs-4 {
-    font-size: 1.5rem !important;
+    font-size: 1.8rem !important;
   }
 }
 @media print {
