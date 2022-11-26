@@ -1,189 +1,288 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8" />
-        <title>CLUB AUTO - Page de vente</title>
-    </head>
-    <body>
-        <section id="mainHeader">
-            <header>
-                <h1>CLUB AUTO</h1>
-                <img src="/images/header/icone-adresse.png" alt="Icone d'adresse" id="adressIcon">
-                <address>
-                    ADRESSE :<br>
-                    AVENUE CHARLES DE GAULLE<br>
-                    75000 PARIS
-                </address>
-                <img src="/images/header/icon-telephone.png" alt="Icone de téléphone" id="phoneIcon">
-                <p>
-                    <strong>T&Eacute;L&Eacute;PHONE :</strong><br>
-                    01 23 45 67 89
-                </p>
-                <p>
-                    <strong>OUVERTURE :</strong> Du Lundi au Samedi<br>
-                    <strong>HORAIRES :</strong> De 9h à 17h
-                </p>
-                <ul>
-                    <li><img src="/images/header/logoFacebookRond.jpg" alt="Logo Facebook"></li>
-                    <li><img src="/images/header/logoTwitterRond.jpg" alt="Logo Twitter"></li>
-                </ul>
-                <nav id="mainNav">
-                    <ul>
-                        <li><a href="/index.html">ACCUEIL</a></li>
-                        <li><a href="/clubAutoPageVente.html">VENTE</a></li>
-                        <li><a href="/clubAutoPageLocation.html">LOCATION</a></li>
-                        <li><a href="/clubAutoPageContact.html">CONTACT</a></li>
-                    </ul>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description"
+        content="Club Auto vous permet d'acheter ou de louer une grande gamme de voiture à petit prix">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLUB AUTO - Page d'accueil</title>
+    <link rel="stylesheet" href="/CSS/normal.css">
+    <link rel="stylesheet" href="scss/bootstrap.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/391ebf2e49.js" crossorigin="anonymous"></script>
+</head>
+<!-- Colors : primary (blue) #6C98E1; secondary (black) #232628; light (grey) #ECEFF3; info (brown) #CC6119; warning (yellow) #FAB637; danger (red) #FF4848; -->
+<body>
+    <header>
+        <div class="bg-secondary">
+            <div class="row py-sm-4 offset-1 col-10 col-xxl-11 py-4">
+                <nav class="navbar navbar-expend-lg col-2 col-sm-0 d-sm-none">
+                    <div class="d-flex justify-content-end container-fluid">
+                        <button type="button" class="navbar-toggler" data-bs-toggle="collapse"
+                            data-bs-target="#navbarButton" aria-controls="navbarButton" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse text-info" id="navbarButton">
+                            <ul class="navbar-nav">
+                                <li class="nav-items"><a href="index.html" class="nav-link">ACCEUIL</a></li>
+                                <li class="nav-items"><a href="clubAutoPageVente.html" class="nav-link">VENTE</a></li>
+                                <li class="nav-items"><a href="clubAutoPageLocation.html" class="nav-link">LOCATION</a></li>
+                                <li class="nav-items"><a href="clubAutoPageContact.html" class="nav-link">CONTACT</a></li>
+                            </ul>
+                        </div>
+                        <!--Bouton menu hamburger visible en sm-->
+                    </div>
                 </nav>
-            </header>
-        </section><!--Ici se termine le #mainHeader-->
-        <section id="espaceVente">
-            <img src="/images/vente-location.jpg" alt="Image de voiture le location">
-            <h1>VENTE</h1>
-            <select>
-                <p>ORDRE :</p>
-                <option value="Prix : Croissant">Prix : Croissant</option>
-            </select>
+                <h1 class="d-none d-sm-flex text-white fs-2 col align-self-center p-0 m-0 fw-bold">CLUB AUTO</h1>
+                <address class="d-none d-sm-flex row col align-self-center p-0 m-0">
+                    <img src="/images/header/icone-adresse.png" alt="Icone d'adresse" class="col-auto pe-0"
+                        style="height: 3.5em; width:auto">
+                    <span class="col-auto fs-6 p-0 text-white m-0">
+                        <span class="text-info fw-bold">ADRESSE :</span><br>
+                        AVENUE CHARLES DE GAULLE<br>
+                        75000 PARIS
+                    </span>
+                </address>
+                <p class="text-white row col align-self-center p-0 m-0">
+                    <img src="/images/header/icon-telephone.png" alt="Icone de téléphone" class="col-auto pe-0"
+                        style="height: 3.5em; width:auto">
+                    <span class="col-auto h4 ps-1 fw-bold">
+                        <span class="text-info h6 fw-bold">T&Eacute;L&Eacute;PHONE :</span><br>
+                        01 23 45 67 89
+                    </span>
+                </p>
+                <p class="text-white d-none d-sm-block col align-self-center p-0 m-0 fw-bold">
+                    <span class="text-info">OUVERTURE :</span> Du Lundi au Samedi<br>
+                    <span class="text-info">HORAIRES :</span> De 9h à 17h
+                </p>
+                <div class="d-none d-xxl-block col align-self-center p-0 m-0">
+                    <span><img src="/images/header/logoFacebookRond.jpg" alt="Logo Facebook" class="pe-0 pe-3"></span>
+                    <span><img src="/images/header/logoTwitterRond.jpg" alt="Logo Twitter"></span>
+                </div>
+            </div>
+        </div>
+        <h1 class="accessibility">Menu principal</h1>
+        <p class="accessibility"><a href="#pageContent"
+                title="Accéder directement au contenu principal de cette page">Passer le menu</a></p>
+
+        <nav id="mainNav"
+            class="navbar navbar-expand-sm bg-light container-fluid d-none d-sm-block position-absolute bg-opacity-75 p-0">
+            <div class="d-flex justify-content-end col-10 offset-1" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-black fw-bold py-3 px-4 fs-6"
+                            href="/index.html"
+                            title="Vers la page d'acceuil du site Club Auto"><span>ACCUEIL</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white bg-info fw-bold fs-6 disabled py-3 px-4 d-block" href="/clubAutoPageVente.html"
+                            title="Vers la page de vente du site Club Auto">VENTE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black fw-bold py-3 px-4 fs-6" href="/clubAutoPageLocation.html"
+                            title="Vers la page de location du site Club Auto">LOCATION</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black fw-bold py-3 px-4 fs-6" href="/clubAutoPageContact.html"
+                            title="Vers la page de contact du site Club Auto">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    </section>
+    <!--Ici se termine le #mainHeader-->
+    <section id="espaceVente">
+        <img src="/images/vente-location.jpg" alt="Image de voiture le location">
+        <h1>VENTE</h1>
+        <select>
+            <p>ORDRE :</p>
+            <option value="Prix : Croissant">Prix : Croissant</option>
+        </select>
+        <ul>
+            <li>
+                <a href="/clubAutoPageDetails.html">
+                    <img src="/images/vehicule2.jpg" alt="Image de voiture">
+                    <span>5 000 €</span>
+                    <h2>BMW 535i, Navi, Leather, ABS</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus eligendi repudiandae cum
+                        commodi consequatur laboriosam quod vitae quis vel voluptatibus at iusto, nostrum nobis facilis
+                        reiciendis dolorum fuga, illum inventore rem itaque. Ut autem blanditiis veritatis earum
+                        exercitationem natus quia.</p>
+                    <p><strong>&rsaquo;&rsaquo; En savoir plus&lsaquo;&lsaquo;</strong>
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a href="/clubAutoPageDetails.html">
+                    <img src="/images/vehicule2.jpg" alt="Image de voiture">
+                    <span>5 000 €</span>
+                    <h2>BMW 535i, Navi, Leather, ABS</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus eligendi repudiandae cum
+                        commodi consequatur laboriosam quod vitae quis vel voluptatibus at iusto, nostrum nobis facilis
+                        reiciendis dolorum fuga, illum inventore rem itaque. Ut autem blanditiis veritatis earum
+                        exercitationem natus quia.</p>
+                    <p><strong>&rsaquo;&rsaquo; En savoir plus&lsaquo;&lsaquo;</strong>
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a href="/clubAutoPageDetails.html">
+                    <img src="/images/vehicule2.jpg" alt="Image de voiture">
+                    <span>5 000 €</span>
+                    <h2>BMW 535i, Navi, Leather, ABS</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus eligendi repudiandae cum
+                        commodi consequatur laboriosam quod vitae quis vel voluptatibus at iusto, nostrum nobis facilis
+                        reiciendis dolorum fuga, illum inventore rem itaque. Ut autem blanditiis veritatis earum
+                        exercitationem natus quia.</p>
+                    <p><strong>&rsaquo;&rsaquo; En savoir plus&lsaquo;&lsaquo;</strong>
+                    </p>
+                </a>
+            </li>
+            <li>
+                <a href="/clubAutoPageDetails.html">
+                    <img src="/images/vehicule2.jpg" alt="Image de voiture">
+                    <span>5 000 €</span>
+                    <h2>BMW 535i, Navi, Leather, ABS</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus eligendi repudiandae cum
+                        commodi consequatur laboriosam quod vitae quis vel voluptatibus at iusto, nostrum nobis facilis
+                        reiciendis dolorum fuga, illum inventore rem itaque. Ut autem blanditiis veritatis earum
+                        exercitationem natus quia.</p>
+                    <p><strong>&rsaquo;&rsaquo; En savoir plus&lsaquo;&lsaquo;</strong>
+                    </p>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <!--Ici se termine le #espaceVente-->
+    <aside id="menuRecherche">
+        <div>
+            <img src="/images/icone-voiture.png" alt="Icone de recherche">
+            <h1>Rechercher</h1>
             <ul>
                 <li>
-                    <a href="/clubAutoPageDetails.html">
-                        <img src="/images/vehicule2.jpg" alt="Image de voiture">
-                        <span>5 000 €</span>
-                        <h2>BMW 535i, Navi, Leather, ABS</h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus eligendi repudiandae cum commodi consequatur laboriosam quod vitae quis vel voluptatibus at iusto, nostrum nobis facilis reiciendis dolorum fuga, illum inventore rem itaque. Ut autem blanditiis veritatis earum exercitationem natus quia.</p>
-                        <p><strong>>> En savoir plus<<</strong></p>
-                    </a>
+                    <select>
+                        <option value="Type">Type</option>
+                    </select>
                 </li>
                 <li>
-                    <a href="/clubAutoPageDetails.html">
-                        <img src="/images/vehicule2.jpg" alt="Image de voiture">
-                        <span>5 000 €</span>
-                        <h2>BMW 535i, Navi, Leather, ABS</h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus eligendi repudiandae cum commodi consequatur laboriosam quod vitae quis vel voluptatibus at iusto, nostrum nobis facilis reiciendis dolorum fuga, illum inventore rem itaque. Ut autem blanditiis veritatis earum exercitationem natus quia.</p>
-                        <p><strong>>> En savoir plus<<</strong></p>
-                    </a>
+                    <select>
+                        <option value="Carburant">Carburant</option>
+                    </select>
                 </li>
                 <li>
-                    <a href="/clubAutoPageDetails.html">
-                        <img src="/images/vehicule2.jpg" alt="Image de voiture">
-                        <span>5 000 €</span>
-                        <h2>BMW 535i, Navi, Leather, ABS</h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus eligendi repudiandae cum commodi consequatur laboriosam quod vitae quis vel voluptatibus at iusto, nostrum nobis facilis reiciendis dolorum fuga, illum inventore rem itaque. Ut autem blanditiis veritatis earum exercitationem natus quia.</p>
-                        <p><strong>>> En savoir plus<<</strong></p>
-                    </a>
+                    <select>
+                        <option value="Marque">Marque</option>
+                    </select>
                 </li>
                 <li>
-                    <a href="/clubAutoPageDetails.html">
-                        <img src="/images/vehicule2.jpg" alt="Image de voiture">
-                        <span>5 000 €</span>
-                        <h2>BMW 535i, Navi, Leather, ABS</h2>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus eligendi repudiandae cum commodi consequatur laboriosam quod vitae quis vel voluptatibus at iusto, nostrum nobis facilis reiciendis dolorum fuga, illum inventore rem itaque. Ut autem blanditiis veritatis earum exercitationem natus quia.</p>
-                        <p><strong>>> En savoir plus<<</strong></p>
-                    </a>
+                    <select>
+                        <option value="Modele">Mod&egrave;le</option>
+                    </select>
+                </li>
+                <li>
+                    <select>
+                        <option value="Kilometrage maximal">Kilom&eacute;trage maximal</option>
+                    </select>
+                </li>
+                <li>
+                    <select>
+                        <option value="Anciennete">Anciennet&eacute;</option>
+                    </select>
+                </li>
+                <li>
+                    Prix<br>
+                    Curseur<br>
+                    Prix min Prix max<br>
                 </li>
             </ul>
-        </section><!--Ici se termine le #espaceVente-->
-        <aside id="menuRecherche">
-            <div>
-                <img src="/images/icone-voiture.png" alt="Icone de recherche">
-                <h1>Rechercher</h1>
-                <ul>
-                    <li>
-                        <select>
-                            <option value="Type">Type</option>
-                        </select>
-                    </li>
-                    <li>
-                        <select>
-                            <option value="Carburant">Carburant</option>
-                        </select>
-                    </li>
-                    <li>
-                        <select>
-                            <option value="Marque">Marque</option>
-                        </select>
-                    </li>
-                    <li>
-                        <select>
-                            <option value="Modele">Mod&egrave;le</option>
-                        </select>
-                    </li>
-                    <li>
-                        <select>
-                            <option value="Kilometrage maximal">Kilom&eacute;trage maximal</option>
-                        </select>
-                    </li>
-                    <li>
-                        <select>
-                            <option value="Anciennete">Anciennet&eacute;</option>
-                        </select>
-                    </li>
-                    <li>
-                        Prix<br>
-                        Curseur<br>
-                        Prix min Prix max<br>
-                    </li>
-                </ul>
-                <span id="boutonreinit">
-                    R&Eacute;INITIALISER
-                </span>
-            </div>
-        </aside><!--Ici se termine le #menuRecherche-->
-        <section id="mainFooter">
-            <footer>
-                <p>
-                    <h1><strong>CLUB</strong> AUTO</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo debitis molestiae voluptates praesentium fugiat alias ipsam earum ipsa porro similique!</p>
-                </p>
-                <p>
-                    <h1>HORAIRE D'OUVERTURE</h1>
-                    Lundi - Samedi : 09:00 - 17:00<br>
-                    Dimanche et jours fériés : Fermé
-                </p>
-                <p>
-                    <h1>NEWSLETTER</h1>
-                    <input type="email" id="Email" required>
-                    <label for="Email">Inscrivez-vous pour recevoir les dernières offres</label>
-                </p>
-                <p>
-                    <h1> R&Eacute;SEAUX SOCIAUX</h1>
-                    <ul>
-                        <li><img src="/images/footer/logoFacebook.jpg"></li>
-                        <li><img src="/images/footer/logoTwitter.jpg"></li>
-                        <li><img src="/images/footer/logoInstagram.jpg"></li>
-                        <li><img src="/images/footer/logoGooglePlus.jpg"></li>
-                        <li><img src="/images/footer/logoYoutube.jpg"></li>
-                    </ul>
-                </p>
-                <p>Copyright &copy; Club Auto - Tous droits réservés</p>
-            </footer>
-        </section><!--Ici se termine le #mainFooter-->
-        <footer id="mainFooter">
+            <span id="boutonreinit">
+                R&Eacute;INITIALISER
+            </span>
+        </div>
+    </aside>
+    <!--Ici se termine le #menuRecherche-->
+    <section id="mainFooter">
+        <footer>
             <p>
-                <h1><strong>CLUB</strong> AUTO</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo debitis molestiae voluptates praesentium fugiat alias ipsam earum ipsa porro similique!</p>
+            <h1><strong>CLUB</strong> AUTO</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo debitis molestiae voluptates praesentium
+                fugiat alias ipsam earum ipsa porro similique!</p>
             </p>
             <p>
-                <h1>HORAIRE D'OUVERTURE</h1>
-                Lundi - Samedi : 09:00 - 17:00<br>
-                Dimanche et jours fériés : Fermé
+            <h1>HORAIRE D'OUVERTURE</h1>
+            Lundi - Samedi : 09:00 - 17:00<br>
+            Dimanche et jours fériés : Fermé
             </p>
             <p>
-                <h1>NEWSLETTER</h1>
-                <input type="email" id="Email" required>
-                <label for="Email">Inscrivez-vous pour recevoir les dernières offres</label>
+            <h1>NEWSLETTER</h1>
+            <input type="email" id="Email" required>
+            <label for="Email">Inscrivez-vous pour recevoir les dernières offres</label>
             </p>
             <p>
-                <h1> R&Eacute;SEAUX SOCIAUX</h1>
-                <ul>
-                    <li><img src="/images/footer/logoFacebook.jpg"></li>
-                    <li><img src="/images/footer/logoTwitter.jpg"></li>
-                    <li><img src="/images/footer/logoInstagram.jpg"></li>
-                    <li><img src="/images/footer/logoGooglePlus.jpg"></li>
-                    <li><img src="/images/footer/logoYoutube.jpg"></li>
-                </ul>
+            <h1> R&Eacute;SEAUX SOCIAUX</h1>
+            <ul>
+                <li><img src="/images/footer/logoFacebook.jpg"></li>
+                <li><img src="/images/footer/logoTwitter.jpg"></li>
+                <li><img src="/images/footer/logoInstagram.jpg"></li>
+                <li><img src="/images/footer/logoGooglePlus.jpg"></li>
+                <li><img src="/images/footer/logoYoutube.jpg"></li>
+            </ul>
             </p>
             <p>Copyright &copy; Club Auto - Tous droits réservés</p>
-        </footer><!--Ici se termine le #mainFooter-->
-    </body>
+        </footer>
+    </section>
+    <!--Ici se termine le #pageContent-->
+    <footer id="mainFooter" class="bg-secondary text-white pb-1">
+        <div class="col-10 offset-1 pb-0 row pt-4">
+            <div class="col-sm-6 col-lg">
+                <p class="py-1 col-sm">
+                    <h1 class="h6"><span class="text-primary fw-bold">CLUB</span> AUTO</h1>
+                    <p class="text-white-50 font-monospace">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+                    debitis molestiae voluptates praesentium fugiat alias ipsam earum ipsa porro similique!</p>
+                </p>
+            </div>
+            <div class="col-sm-6 col-lg">
+                <p class="py-1">
+                    <h1 class="h6 fw-bold">HORAIRE D'OUVERTURE</h1>
+                    <span class="text-white-50 fw-bold">Lundi - Samedi :</span> 09:00 - 17:00<br>
+                    <span class="text-white-50 fw-bold">Dimanche et jours fériés :</span> Fermé
+        </p>
+            </div>
+            <div class="col-sm-6 col-lg">
+                <p class="py-1">
+                    <h1 class="h6 pb-2 fw-bold">NEWSLETTER</h1>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control rounded-0" placeholder="Entrez votre Email"
+                            aria-label="Entrez votre Email" aria-describedby="button-addon2">
+                        <button class="btn p-0 m-0 border-0" type="button" id="button-addon2"><img
+                            src="images/footer/connexion-sans-fil.png" alt="logo de connexion"
+                            style="height: 3em;"></button>
+                    </div>
+                    <label for="Email" class="text-white-50 font-monospace">Inscrivez-vous pour recevoir les dernières
+                    offres</label>
+        </p>
+            </div>
+            <div class="col-sm-6 col-lg">
+                <p class="py-1">
+                    <h1 class="h6 fw-bold"> R&Eacute;SEAUX SOCIAUX</h1>
+                    <div class="pb-3">
+                        <img src="/images/footer/logoFacebook.jpg" alt="Logo Facebook">
+                        <img src="/images/footer/logoTwitter.jpg" alt="Logo Twitter">
+                        <img src="/images/footer/logoInstagram.jpg" alt="Logo Intagram">
+                        <img src="/images/footer/logoGooglePlus.jpg" alt="Logo google plus">
+                        <img src="/images/footer/logoYoutube.jpg" alt="Logo youtube">
+                    </div>
+        </p>
+            </div>
+        </div>
+        <hr class="col-10 offset-1">
+        <p id="copyright" class="text-white-50 fs-6 text-center">Copyright &copy; Club Auto - Tous droits réservés
+        </p>
+    </footer>
+    <!--Ici se termine le #mainFooter-->
+</body>
+
 </html>
