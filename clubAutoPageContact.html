@@ -37,7 +37,8 @@
                         <!--Bouton menu hamburger visible en sm-->
                     </div>
                 </nav>
-                <h1 class="d-none d-sm-flex text-white fs-2 col align-self-center p-0 m-0 fw-bold">CLUB AUTO</h1>
+                <h1 class="text-white fs-1 col align-self-center p-0 m-0 fw-bold order-first d-sm-none">CLUB AUTO</h1>
+                <h1 class="text-white fs-2 col align-self-center p-0 m-0 fw-bold d-none d-sm-block">CLUB AUTO</h1>
                 <address class="d-none d-sm-flex row col align-self-center p-0 m-0">
                     <img src="/images/header/icone-adresse.png" alt="Icone d'adresse" class="col-auto pe-0"
                         style="height: 3.5em; width:auto">
@@ -47,10 +48,10 @@
                         75000 PARIS
                     </span>
                 </address>
-                <p class="text-white row col align-self-center p-0 m-0">
-                    <img src="/images/header/icon-telephone.png" alt="Icone de téléphone" class="col-auto pe-0"
+                <p class="text-white row col-sm align-self-center pt-3 pt-sm-0 p-0 m-0">
+                    <img src="/images/header/icon-telephone.png" alt="Icone de téléphone" class="col-auto pe-0 ps-0"
                         style="height: 3.5em; width:auto">
-                    <span class="col-auto h4 ps-1 fw-bold">
+                    <span class="col-auto ps-1 h4 fw-bold">
                         <span class="text-info h6 fw-bold">T&Eacute;L&Eacute;PHONE :</span><br>
                         01 23 45 67 89
                     </span>
@@ -74,8 +75,8 @@
             <div class="d-flex justify-content-end col-10 offset-1" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link text-black fw-bold py-3 px-4 fs-6"
-                            href="/index.html" title="Vers la page d'acceuil du site Club Auto"><span>ACCUEIL</span></a>
+                        <a class="nav-link text-black fw-bold py-3 px-4 fs-6" href="/index.html"
+                            title="Vers la page d'acceuil du site Club Auto"><span>ACCUEIL</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-black fw-bold py-3 px-4 fs-6" href="/clubAutoPageVente.html"
@@ -94,30 +95,32 @@
         </nav>
     </header>
     <!--Ici se termine le #mainHeader-->
-    <section id="pageContent">
-        <main>
-            <img src="/images/vehicule3.jpg">
-            <h1>CONTACTEZ NOUS</h1>
-            <form id="frmcontact">
-                <div>
-                    <label for="prenom">Prénom*</label><br>
-                    <input type="text" id="prenom" required autofocus placeholder="Entrez votre prénom"
-                        tabindex="1"><br>
-                    <label for="Email">Email*</label><br>
-                    <input type="email" id="Email" required placeholder="Entrez une adresse mail valide" tabindex="3">
-                </div>
-                <div>
-                    <label for="nom">Nom*</label><br>
-                    <input type="text" id="nom" required placeholder="Entrez votre nom" tabindex="2"><br>
-                    <label for="phone">Téléphone</label><br>
-                    <input type="number" id="phone" placeholder="Entrez votre numéro de téléphone" tabindex="4">
-                </div>
-                <div>
-                    <label for="message">Message</label><br>
-                    <textarea id="message" placeholder="Ecrivez votre message" tabindex="5"></textarea><br>
-                    <button type="submit">ENVOYEZ</button>
-                </div>
-            </form>
+    <section>
+        <div id="pageContact"></div>
+        <main class="offset-1 col-10 shadow-lg mb-5 bg-white" style="margin-top: -14em;">
+            <div class="offset-1 col-10 px-2">
+                <h1 class="fw-bold pt-5 pb-3">CONTACTEZ NOUS</h1>
+                <form id="frmcontact" class="row gx-5">
+                    <div class="col-sm-3">
+                        <label for="prenom" class="fw-lightbold pb-1 pt-sm-4">Prénom*</label><br>
+                        <input type="text" id="prenom" required autofocus placeholder="Entrez votre prénom"
+                            tabindex="1" class="border-0 rounded-0 bg-light font-monospace fw-lightbold col-12 py-2 ps-4"><br>
+                        <label for="Email" class="fw-lightbold pb-1 pt-4">Email*</label><br>
+                        <input type="email" id="Email" required placeholder="Entrez une adresse mail valide" tabindex="3" class="border-0 rounded-0 bg-light font-monospace fw-lightbold col-12 py-2 ps-4">
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="nom" class="fw-lightbold pb-1 pt-4">Nom*</label><br>
+                        <input type="text" id="nom" required placeholder="Entrez votre nom" tabindex="2" class="border-0 rounded-0 bg-light font-monospace fw-lightbold col-12 py-2 ps-4"><br>
+                        <label for="phone" class="fw-lightbold pb-1 pt-4">Téléphone</label><br>
+                        <input type="number" id="phone" placeholder="Entrez votre numéro de téléphone" tabindex="4" class="border-0 rounded-0 bg-light font-monospace fw-lightbold col-12 py-2 ps-4">
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="message" class="fw-lightbold pb-1 pt-4">Message</label><br>
+                        <textarea id="message" placeholder="Ecrivez votre message" tabindex="5" style="resize: none;" class="border-0 rounded-0 bg-light font-monospace fw-lightbold col-12 pt-2 pb-6 ps-4"></textarea><br>
+                        <button type="submit" class="btn btn-primary text-white fw-bold py-3 px-5 rounded-1 fs-5 my-3">ENVOYEZ</button>
+                    </div>
+                </form>
+            </div>
         </main>
     </section>
     <!--Ici se termine le #pageContent-->
